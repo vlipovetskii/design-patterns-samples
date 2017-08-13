@@ -1,0 +1,18 @@
+package dzone.vish;
+
+import vlfsoft.common.annotations.design.patterns.CreationalPattern;
+
+/**
+ * @author Vishnu
+ *
+ */
+@CreationalPattern.Singleton
+public class BillPughSingleton {
+	  private BillPughSingleton(){}
+	    private static class SingletonHelper{
+	        private static final BillPughSingleton INSTANCE = new BillPughSingleton();
+	    }
+	    public static BillPughSingleton getInstance(){
+	        return SingletonHelper.INSTANCE;
+	    }
+}
